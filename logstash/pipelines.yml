@@ -1,0 +1,18 @@
+# This file is where you define your pipelines. You can define multiple.
+# For more information on multiple pipelines, see the documentation:
+#   https://www.elastic.co/guide/en/logstash/current/multiple-pipelines.html
+
+- pipeline.id: ssm_pipe
+  path.config: "/etc/logstash/pipelines/ssm_pipeline.conf"
+
+- pipeline.id: vpcflowlogs_pipe
+  path.config: "/etc/logstash/pipelines/vpcflowlogs_pipeline.conf"
+
+#- pipeline.id: cloudtrail_pipe
+#  path.config: "/etc/logstash/pipelines/cloudtrail_pipeline.conf"
+
+- pipeline.id: config_pipe
+  path.config: "/etc/logstash/pipelines/config_pipeline.conf"
+
+- pipeline.id: config_notif_pipe
+  path.config: "/etc/logstash/pipelines/config_notif_pipeline.conf
